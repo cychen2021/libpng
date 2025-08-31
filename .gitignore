@@ -131,7 +131,6 @@ CMakeUserPresets.json
 /Makefile.in
 /test-driver
 /aclocal.m4
-/scripts/pnglibconf.dfa
 /config*~
 /config.h
 /config.log
