@@ -159,3 +159,5 @@ pngprefix.h
 /pngunknown
 /pngvalid
 /timepng
+
+/libpng_read_fuzzer
