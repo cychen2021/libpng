@@ -130,7 +130,7 @@ CMakeUserPresets.json
 /missing
 /Makefile.in
 /test-driver
-/alocal.m4
+/aclocal.m4
 /config*~
 /config.h
 /config.log
