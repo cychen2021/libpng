@@ -435,3 +435,11 @@ endif
 # too.  It used to, but some change either in libpng or configure stopped this
 # working.
 all-am: $(check_PROGRAMS)
+
+.PHONY: oss-fuzz
+
+oss-fuzz: libpng@PNGLIB_MAJOR@@PNGLIB_MINOR@.la
+	$(CXX) $(CXXFLAGS) -std=c++11 -I$(srcdir) \
+		$(srcdir)/contrib/oss-fuzz/libpng_read_fuzzer.cc \
+		-o libpng_read_fuzzer \
+		-lFuzzingEngine .libs/libpng@PNGLIB_MAJOR@@PNGLIB_MINOR@.a -lz
