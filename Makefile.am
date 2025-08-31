@@ -439,7 +439,7 @@ all-am: $(check_PROGRAMS)
 .PHONY: oss-fuzz
 
 oss-fuzz: libpng@PNGLIB_MAJOR@@PNGLIB_MINOR@.la
-	$(CXX) $(CXXFLAGS) -std=c++11 -I$(srcdir) \
+	$(CXX) $(CXXFLAGS) -DPNG_SIMPLIFIED_READ_SUPPORT=1 -std=c++11 -I$(srcdir) \
 	 	-fsanitize=fuzzer \
 		$(srcdir)/contrib/oss-fuzz/libpng_read_fuzzer.cc \
 		-o libpng_read_fuzzer \
